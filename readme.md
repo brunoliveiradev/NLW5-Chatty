@@ -1,5 +1,5 @@
 <h1 align="center">
-    NLW5: Criando um chat com node.js e o protocolo socket.IO
+    NLW5: Criando um chat com Node.js e WebSocket
 </h1>
 
 
@@ -23,7 +23,7 @@
 <br>
 
 <p align="center">
-    <img alt="home" src="https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fdribbble.com%2Fshots%2F9801514-Web-Chat-UI&psig=AOvVaw2jJFMwYMJGgzDUi8g53AeV&ust=1619363386127000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLi_gPCUl_ACFQAAAAAdAAAAABAl" width="80%" height="80%">
+    <img alt="home" src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" width="80%" height="80%">
 </p>
 
 <br>
@@ -54,7 +54,7 @@
 
 ⚙ Este é a 5ª edição da NLW _(Next Level Week)_ promovido pela Rocketseat, uma Instituição Educacional de Tecnologia. Foi um evento com duração de 7 dias, sendo destes 5 dias de conteúdo imersivo na tecnologia, onde o objetivo e levar os programadores ao próximo nível.
 
-👾 O foco foi realmente no back-end, aplicando o protocolo socket.io, em conjunto com as tecnologias citadas, para que seja possivel haver uma comunicação bilateral entre um usúario e um suporte. Sendo possível desabilitar o chat da página, similar a um widget.
+👾 O foco foi realmente no back-end, aplicando o protocolo websocket, em conjunto com as tecnologias citadas, para que seja possivel haver uma comunicação bilateral entre um usúario e um suporte. Sendo possível desabilitar o chat da página, similar a um widget.
 
 📫 Espero que goste, qualquer dúvida ou sugestão me encontro a disposição! [LinkedIn](https://www.linkedin.com/in/brunooliveira13/)
 
@@ -67,7 +67,7 @@
 3. Clone este repositório
 4. Acesse a pasta do projeto e execute o comando `yarn` para instalar todas às dependências
 5. Assim que a instalação terminar, digite o comando `yarn dev`
-6. A API estará rodando na port 3000 (caso ela esteja em uso altere ela em `server.ts`)
+6. A API estará rodando na port 3333 (caso ela esteja em uso altere ela em `server.ts`)
 
 <br>
 
