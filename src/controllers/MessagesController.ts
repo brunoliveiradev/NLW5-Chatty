@@ -4,9 +4,9 @@ import { MessagesService } from "../services/MessagesService";
 class MessagesController {
   async create(request: Request, response: Response) {
     const { admin_id, text, user_id } = request.body;
-    const messageService = new MessagesService();
+    const messagesService = new MessagesService();
 
-    const message = await messageService.create({
+    const message = await messagesService.create({
       //caso admin veja sem preenchido continuará funcionando
       admin_id,
       text,
@@ -16,12 +16,13 @@ class MessagesController {
     return response.json(message);
   }
 
-  // localhost:3333/messages/idDoUser -> por onde irá receber ao invés do body
+  // localhost:3333/messages/idDoUsuario
   async showByUser(request: Request, response: Response) {
     const { id } = request.params;
 
-    const messageService = new MessagesService();
-    const list = await messageService.listByUser(id);
+    const messagesService = new MessagesService();
+
+    const list = await messagesService.listByUser(id);
 
     return response.json(list);
   }

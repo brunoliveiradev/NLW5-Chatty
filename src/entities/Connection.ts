@@ -1,16 +1,17 @@
-import { 
+import {
   Entity,
   PrimaryColumn,
   CreateDateColumn,
   Column,
   ManyToOne,
   JoinColumn,
-  UpdateDateColumn 
+  UpdateDateColumn,
 } from "typeorm";
+
 import { v4 as uuid } from "uuid";
 import { User } from "./User";
 
-@Entity('connections')
+@Entity("connections")
 class Connection {
   @PrimaryColumn()
   id: string;
@@ -21,8 +22,8 @@ class Connection {
   @Column()
   socket_id: string;
 
-  @ManyToOne(() => User)
   @JoinColumn({ name: "user_id" })
+  @ManyToOne(() => User)
   user: User;
 
   @Column()
