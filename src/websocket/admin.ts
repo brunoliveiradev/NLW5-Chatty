@@ -1,9 +1,8 @@
-import {io} from "../http";
-import {ConnectionsService} from "../services/ConnectionsService";
-import {MessagesService} from "../services/MessagesService";
+import { io } from "../http";
+import { ConnectionsService } from "../services/ConnectionsService";
+import { MessagesService } from "../services/MessagesService";
 
-
-io.on("connect", async socket => {
+io.on("connect", async (socket) => {
   const connectionsService = new ConnectionsService();
   const messagesService = new MessagesService();
   //listagem das conexões sem admin
@@ -11,7 +10,7 @@ io.on("connect", async socket => {
   io.emit("admin_list_all_users", allConnectionsWithoutAdmin);
 
   socket.on("admin_list_messages_by_user", async (params, callback) => {
-    const {user_id} = params;
+    const { user_id } = params;
 
     const allMessages = await messagesService.listByUser(user_id);
 
@@ -37,14 +36,12 @@ io.on("connect", async socket => {
     });
   });
 
-  socket.on('admin_user_in_support', async (params) => {
+  socket.on("admin_user_in_support", async (params) => {
     const { user_id } = params;
     await connectionsService.updateAdminID(user_id, socket.id);
 
     const allConnectionsWithoutAdmin = await connectionsService.findAllWithoutAdmin();
 
-    // io.emit('admin_list_all_users', allConnectionsWithoutAdmin);
-    io.emit('admin_list_all_users', allConnectionsWithoutAdmin);
-
+    io.emit("admin_list_all_users", allConnectionsWithoutAdmin);
   });
 });

@@ -5,8 +5,8 @@ import { MessagesRepository } from "../repositories/MessagesRepository";
 interface IMessageCreate {
   // ADMIN_ID pode ser um atributo opcional
   admin_id?: string;
-  user_id: string;
   text: string;
+  user_id: string;
 }
 
 class MessagesService {
